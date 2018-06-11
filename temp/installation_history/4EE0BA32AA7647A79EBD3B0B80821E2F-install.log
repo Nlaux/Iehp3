@@ -1,0 +1,21 @@
+OK: MkDir  D:\installation_history\4EE0BA32AA7647A79EBD3B0B80821E2F\bin
+OK: MoveIfNotExists C:\inetpub\wwwroot\iehp\Website\bin\Sitecore.WFFM.Exm.dll D:\installation_history\4EE0BA32AA7647A79EBD3B0B80821E2F\bin/sitecore.wffm.exm.dll
+OK: MkDir  C:\inetpub\wwwroot\iehp\Website\bin
+OK: Move D:\install\4EE0BA32AA7647A79EBD3B0B80821E2F\1u3d3bgp.wwt C:\inetpub\wwwroot\iehp\Website\bin\Sitecore.WFFM.Exm.dll
+OK: MkDir  D:\installation_history\4EE0BA32AA7647A79EBD3B0B80821E2F\sitecore\shell\applications\modules\web forms for marketers\dialogs\action editor
+OK: MoveIfNotExists C:\inetpub\wwwroot\iehp\Website\sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\SendStandardMessage.xaml.xml D:\installation_history\4EE0BA32AA7647A79EBD3B0B80821E2F\sitecore/shell/applications/modules/web forms for marketers/dialogs/action editor/sendstandardmessage.xaml.xml
+OK: MkDir  C:\inetpub\wwwroot\iehp\Website\sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor
+OK: Move D:\install\4EE0BA32AA7647A79EBD3B0B80821E2F\iref3x1a.y0v C:\inetpub\wwwroot\iehp\Website\sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\SendStandardMessage.xaml.xml
+OK: MkDir  D:\installation_history\4EE0BA32AA7647A79EBD3B0B80821E2F\sitecore\shell\applications\modules\web forms for marketers\dialogs\common
+OK: MoveIfNotExists C:\inetpub\wwwroot\iehp\Website\sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Common\SelectStandardMessage.xml D:\installation_history\4EE0BA32AA7647A79EBD3B0B80821E2F\sitecore/shell/applications/modules/web forms for marketers/dialogs/common/selectstandardmessage.xml
+OK: MkDir  C:\inetpub\wwwroot\iehp\Website\sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Common
+OK: Move D:\install\4EE0BA32AA7647A79EBD3B0B80821E2F\2j3favnt.3bh C:\inetpub\wwwroot\iehp\Website\sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Common\SelectStandardMessage.xml
+OK: MkDir  D:\installation_history\4EE0BA32AA7647A79EBD3B0B80821E2F\sitecore\shell\applications\modules\web forms for marketers\script
+OK: MoveIfNotExists C:\inetpub\wwwroot\iehp\Website\sitecore\shell\Applications\Modules\Web Forms for Marketers\script\MessagePreview.js D:\installation_history\4EE0BA32AA7647A79EBD3B0B80821E2F\sitecore/shell/applications/modules/web forms for marketers/script/messagepreview.js
+OK: MkDir  C:\inetpub\wwwroot\iehp\Website\sitecore\shell\Applications\Modules\Web Forms for Marketers\script
+OK: Move D:\install\4EE0BA32AA7647A79EBD3B0B80821E2F\f5mp2vxf.c4r C:\inetpub\wwwroot\iehp\Website\sitecore\shell\Applications\Modules\Web Forms for Marketers\script\MessagePreview.js
+OK: MkDir  D:\installation_history\4EE0BA32AA7647A79EBD3B0B80821E2F\sitecore\shell\themes\standard\default\wfm
+OK: MoveIfNotExists C:\inetpub\wwwroot\iehp\Website\sitecore\shell\Themes\Standard\Default\WFM\MessagePreview.css D:\installation_history\4EE0BA32AA7647A79EBD3B0B80821E2F\sitecore/shell/themes/standard/default/wfm/messagepreview.css
+OK: MkDir  C:\inetpub\wwwroot\iehp\Website\sitecore\shell\Themes\Standard\Default\WFM
+OK: Move D:\install\4EE0BA32AA7647A79EBD3B0B80821E2F\f2cymtwf.xi4 C:\inetpub\wwwroot\iehp\Website\sitecore\shell\Themes\Standard\Default\WFM\MessagePreview.css
+OK: Delete  D:\install\4EE0BA32AA7647A79EBD3B0B80821E2F-commit.bat

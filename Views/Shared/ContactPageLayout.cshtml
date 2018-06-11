@@ -1,0 +1,68 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@Html.Sitecore().Field("title", new { DisableWebEdit = true })</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900" rel="stylesheet">
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/iehp.js"></script>
+
+    @Html.Sitecore().VisitorIdentification()
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="col-24 col-md-24 col-lg-20 col-xxl-14 mx-auto">
+            @Html.Sitecore().Placeholder("navCtrl")
+        </div>
+    </div>
+
+    @RenderPage("~/Views/Shared/_StickySocial.cshtml")
+
+
+    <div class="container-fluid">
+        <div class="col-14 mx-auto row itemSep">
+            <div id="formHeader" class="col-24 greenBackground allPadding white">
+                <h2>Ask IEHP</h2>
+                <p>If you have any questions or feedback about IEHP's services and programs, please fill out the form below. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="col-14 mx-auto row">
+            <div class="col-24 lightBackground allPadding">
+                @Html.Sitecore().Placeholder("Content")
+            </div>
+        </div>
+    </div>
+
+
+    <div id="footer" class="container-fluid">
+        <div id="footerLinks" class="col-md-24 col-lg-20 col-xxl-14 mx-auto row">
+            @Html.Sitecore().Placeholder("footerLinks")
+        </div>
+    </div>
+
+    <div id="extraFooter" class="container-fluid">
+        <div class="col-md-24 col-lg-20 col-xxl-14 mx-auto row topPadding text-center">
+            @Html.Sitecore().Placeholder("extraFooterLinks")
+        </div>
+    </div>
+
+
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+</body>
+</html>

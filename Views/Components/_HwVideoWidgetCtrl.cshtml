@@ -1,0 +1,48 @@
+﻿@using Sitecore.Mvc
+@model iehp.HwVideoWidget.Models.EventViewModel
+
+<div id="youtubeVideoWrapper" class="col-24 col-md-13 row">
+
+</div>
+
+<div id="vimeoVideoWrapper" class="col-24 col-md-13 row">
+
+</div>
+
+@foreach (var child in ViewBag.activeVideoList)
+{
+    string vidType = @Html.Sitecore().Field("Video Type", child).ToString();
+    string vimVideoID = @Html.Sitecore().Field("Vimeo Video ID", child).ToString();
+    string ytVideoID = @Html.Sitecore().Field("Youtube Video ID", child).ToString();
+
+    <script type="text/javascript">
+    if ("@vidType" == "Youtube") {
+        $('#youtubeVideoWrapper').html("<object width='100%' height='100%'><param name='movie' value='http://www.youtube.com/embed/" + '@ytVideoID' + "?html5=1&amp;rel=0&amp;hl=en_US&amp;version=3' /><param name='allowFullScreen' value='true' /><param name='allowscriptaccess' value='always' /><embed width='100%' height='100%' src='http://www.youtube.com/embed/" + '@ytVideoID' + "?html5=1&amp;rel=0&amp;hl=en_US&amp;version=3' class='youtube-player' type='text/html' allowscriptaccess='always' allowfullscreen='true' /></object>");
+        $('#youtubeVideoWrapper').css('display', 'block');
+
+    } else if ("@vidType" == "Vimeo") {
+        var videoUrl = 'http://www.vimeo.com/' + @vimVideoID;
+        var endpoint = 'http://www.vimeo.com/api/oembed.json';
+        var callback = 'embedVideo';
+
+        var url = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback;
+
+        function embedVideo(video) {
+            document.getElementById('vimeoVideoWrapper').innerHTML = unescape(video.html);
+        }
+
+        function init() {
+            var js = document.createElement('script');
+            js.setAttribute('type', 'text/javascript');
+            js.setAttribute('src', url);
+            document.getElementsByTagName('head').item(0).appendChild(js);
+        }
+
+        window.onload = init;
+        $('#vimeoVideoWrapper').css('display', 'block');
+    }
+    </script>
+}
+
+
+

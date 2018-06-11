@@ -1,0 +1,19 @@
+﻿@using Sitecore.Data.Fields
+@using Sitecore.Data.Items
+@using Sitecore.Mvc
+@using Sitecore.Resources.Media
+@model iehp.MemberHero.Models.MemberHeroCtrlModel
+
+
+@{ 
+    Item item = Sitecore.Context.Item;
+    ImageField imgField = ((ImageField)item.Fields["Image"]);
+}
+
+
+<div id="memberHeroContent" class="col-24 row align-items-center" style="background:url(@MediaManager.GetMediaUrl(imgField.MediaItem)) 0 center no-repeat">
+    <div class="col-19 offset-1 col-sm-15 col-md-14 col-xl-9 col-xxl-6 offset-md-3 offset-lg-5 offset-xxl-5">
+        <h1>@Html.Sitecore().Field("Slide Header")</h1>
+        <p>@Html.Sitecore().Field("Slide Text")</p>
+    </div>
+</div>

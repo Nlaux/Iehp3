@@ -1,0 +1,23 @@
+﻿@using Sitecore.Form.Core.Configuration
+@using Sitecore.Forms.Mvc
+@using Sitecore.Forms.Mvc.Html
+@model Sitecore.Forms.Mvc.ViewModels.FormViewModel
+
+@{
+  ViewContext.ViewData.TemplateInfo.HtmlFieldPrefix = Model.ClientId;
+
+  var scripts = new List<string>
+  {
+    "libs/jquery/jquery-ui-1.11.3.min.js",
+    "libs/jquery/jquery.validate.min.js",
+    "libs/jquery/jquery.validate.unobtrusive.min.js",
+    "wffm.min.js",
+    "main.min.js"    
+  };
+}
+
+@Html.EditorFor(x => Model)
+@if (!Model.SuccessSubmit && !Model.Errors.Any())
+{
+    @Html.RenderScripts(scripts.Select(s => Constants.ScriptsBaseUrl + s).ToArray())
+}

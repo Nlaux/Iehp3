@@ -1,0 +1,14 @@
+﻿@using Sitecore.Mvc
+@model iehp.ExtraFooterNav.Models.NavigationViewModel
+
+
+<ul class="extrafooterNavMenu">
+    @foreach (var child in Model.Guid1List)
+    {
+        <li>@Html.Sitecore().Field("Link Url", child)</li>
+    }
+</ul>
+
+<div class="col-sm-24 text-center">
+    <p class="copyrightText">&copy; @ViewBag.currentYear Inland Empire Health Plan. All Rights Reserved.</p>
+</div>

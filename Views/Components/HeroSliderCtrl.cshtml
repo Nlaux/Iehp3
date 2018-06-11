@@ -1,0 +1,49 @@
+﻿@using Sitecore.Data.Items
+@using Sitecore.Mvc
+@using Sitecore.Resources.Media
+@model iehp.HeroSlider.Models.SliderViewModel
+
+<div id="heroRotator" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li data-target="#heroRotator" data-slide-to="0" class="active"></li>
+        <li data-target="#heroRotator" data-slide-to="1"></li>
+        <li data-target="#heroRotator" data-slide-to="2"></li>
+        <li data-target="#heroRotator" data-slide-to="3"></li>
+    </ul>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        @{ Boolean first = true; }
+        @foreach (var child in Model.Children)
+        {
+            var mediaItem = (MediaItem) child;
+            var mediaTitle = mediaItem.Title;
+            var mediaDesc = mediaItem.Description;
+            
+
+            <div class="carousel-item @( first ? "active" : "" )">
+                <img src="@MediaManager.GetMediaUrl(mediaItem)" />
+
+                 <div class="carousel-caption">
+                     <h3>@Html.Raw(mediaTitle)</h3>
+                     <h4>@Html.Raw(mediaDesc)</h4>
+                     <div class="heroImgTextWrapper">
+                   @*<div style="@Html.Sitecore().Field("Styling", child)">*@
+                        @Html.Sitecore().Field("Custom Text", child)
+                    </div>
+                </div>
+            </div>
+
+            first = false;
+        }
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#heroRotator" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#heroRotator" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>

@@ -1,0 +1,66 @@
+﻿@using Sitecore.Data.Fields
+@using Sitecore.Data.Items
+@using Sitecore.Mvc
+@using Sitecore.Resources.Media
+@model iehp.TabWrapper.Models.EventViewModel
+
+<div class="col-12"><h4>Upcoming Events</h4></div>
+<div class="col-12 text-right">
+    <ul class="pager">
+        <li><a href="#">&larr; Prev</a></li>
+        <li><a href="#">Next &rarr;</a></li>
+    </ul>
+</div>
+
+<div class="col-24">
+    <ul id="eventsTab" class="nav nav-tabs nav-fill">
+        <li class="nav-item">
+            <div id="eventTab1"></div>
+            <a class='eventLink1 nav-link active' href='#' data-toggle='tab'>Community</a>
+        </li>
+        <li class="nav-item">
+            <div id="eventTab2"></div>
+            <a class='eventLink2 nav-link' href='#' data-toggle='tab'>Health</a>
+        </li>
+    </ul>
+       
+</div>
+
+
+<div class="eventBlock1 card-deck">
+    @foreach (var child in ViewBag.communityList)
+    {
+        Item item = Sitecore.Context.Item;
+        ImageField imgField = ((ImageField)child.Fields["Image"]);
+
+        <div class="card" style="margin-right:20px;">
+            <img class="card-img-top" src="@MediaManager.GetMediaUrl(imgField.MediaItem)" />
+            <div class="card-body">
+                <div class="card-text">
+                    <h6 class="cardTitle">@Html.Sitecore().Field("Title", child)</h6>
+                    <p class="cardDesc">@Html.Sitecore().Field("Description", child)</p>
+                </div>
+                <p class="date-time"><strong>Event Date:</strong> @Html.Sitecore().Field("Event Date", child)</p>
+            </div>
+        </div>
+    }
+</div>
+
+<div class="eventBlock2 card-deck">
+    @foreach (var child in ViewBag.healthList)
+    {
+        Item item = Sitecore.Context.Item;
+        ImageField imgField = ((ImageField)child.Fields["Image"]);
+
+        <div class="card" style="margin-right:20px;">
+            <img class="card-img-top" src="@MediaManager.GetMediaUrl(imgField.MediaItem)" />
+            <div class="card-body">
+                <div class="card-text">
+                    <h6 class="cardTitle">@Html.Sitecore().Field("Title", child)</h6>
+                    <p class="cardDesc">@Html.Sitecore().Field("Description", child)</p>
+                </div>
+                <p class="date-time"><strong>Event Date:</strong> @Html.Sitecore().Field("Event Date", child)</p>
+            </div>
+        </div>
+    }
+</div>

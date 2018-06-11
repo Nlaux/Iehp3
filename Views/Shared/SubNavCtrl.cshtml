@@ -1,0 +1,27 @@
+﻿@using Sitecore.Mvc
+@model iehp.Navigation.Models.NavigationViewModel
+
+<div class="col-24">
+    <ul class="navMenu small">
+        @foreach (var child in Model.Guid1List)
+        {
+            <li>
+                @Html.Sitecore().Field("Link Url", child)
+            </li>
+        }
+    </ul>
+</div>
+
+
+    @*<p>Parent Guid: @Model.Item.ID.ToString()</p>
+        <p>Parent Guid Template ID: @Model.Item.TemplateID.ToString()</p>
+        <br />
+        <p>Children Guids of Parent Guid:</p>
+
+        <ul>
+            @foreach (var child in Model.Children)
+            {
+                <li>Template ID: @child.TemplateID.ToString()</li>
+            }
+        </ul>*@
+

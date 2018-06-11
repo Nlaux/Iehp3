@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+  <sitecore>
+    <contentSearch>
+      <configuration type="Sitecore.ContentSearch.ContentSearchConfiguration, Sitecore.ContentSearch">
+        <indexes hint="list:AddIndex">
+          <index id="sitecore_web_index" type="Sitecore.ContentSearch.SolrProvider.SolrSearchIndex, Sitecore.ContentSearch.SolrProvider">
+            <param desc="name">$(id)</param>
+            <param desc="core">sitecore_web_index_$(id)</param>
+            
+            <param desc="propertyStore" ref="contentSearch/indexConfigurations/databasePropertyStore" param1="$(id)" />
+
+            <configuration ref="contentSearch/indexConfigurations/defaultSolrIndexConfiguration">
+
+              <documentOptions type="Sitecore.ContentSearch.SolrProvider.SolrDocumentBuilderOptions, Sitecore.ContentSearch.SolrProvider">
+
+                <indexAllFields>true</indexAllFields>
+
+                <!-- Included fields -->
+                <!-- <include hint="list:AddIncludedField">
+                  <Title>{96970EAB-F8C6-4DE2-A124-CDAC2DFD0C90}</Title> 
+                <Content>{EC539DFA-07C1-49A4-A094-87EACF5ED9BB}</Content> 
+                </include> -->
+
+                <!-- Included templates -->
+                <include hint="list:AddIncludedTemplate">
+                  <HomePage>{B5C0EA57-A602-48CE-897D-4242FE465A27}</HomePage>
+                  <MembersPage>{F6E70448-D376-4615-9FBE-5E6D38765F31}</MembersPage>
+                  <SearchPage>{02C5DBDF-3D18-47EC-8900-F98871A597F1}</SearchPage>
+                </include>
+
+              </documentOptions>
+              
+            </configuration>
+            
+            <strategies hint="list:AddStrategy">
+              <strategy ref="contentSearch/indexConfigurations/indexUpdateStrategies/onPublishEndAsync" />
+            </strategies>
+            
+            <locations hint="list:AddCrawler">
+              <crawler type="Sitecore.ContentSearch.SitecoreItemCrawler, Sitecore.ContentSearch">
+                <Database>web</Database>
+                <Root>/sitecore/content/Home</Root>
+              </crawler>
+            </locations>
+            
+            <enableItemLanguageFallback>false</enableItemLanguageFallback>
+            <enableFieldLanguageFallback>false</enableFieldLanguageFallback>
+          </index>
+        </indexes>
+      </configuration>
+    </contentSearch>
+  </sitecore>
+</configuration>

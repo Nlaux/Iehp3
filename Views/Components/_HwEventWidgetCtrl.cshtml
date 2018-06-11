@@ -1,0 +1,11 @@
+﻿@using Sitecore.Mvc
+@model iehp.HwEventWidget.Models.EventViewModel
+
+<div class="col-24">
+    @foreach (var child in ViewBag.eventList1)
+    {
+        <h6><strong>@Html.Sitecore().Field("Event Title", child)</strong></h6>
+        <p>@Html.Sitecore().Field("Event Text", child)</p>
+        <p>@Html.Sitecore().Field("Event Date", child)</p>
+    }
+    </div>

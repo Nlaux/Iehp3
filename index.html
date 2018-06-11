@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@Html.Sitecore().Field("title", new { DisableWebEdit = true })</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="CODE_LANGUAGE" content="C#" />
+    <meta name="vs_defaultClientScript" content="JavaScript" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,400italic,600italic,700italic,300,600,700,800" rel="stylesheet" type="text/css" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/styles.css" rel="stylesheet" />
+
+    <script src="/Scripts/jquery-1.9.1.js"></script>
+
+    <!-- @* @Html.Sitecore().VisitorIdentification() *@ -->
+
+    <style type="text/css"> 
+        .grey {
+            background:grey;
+        }
+
+        .lightGrey {
+            background:lightgrey;
+        }
+
+        .green {
+            background:green;
+        }
+
+        .aqua {
+            background:aqua;
+        }
+
+        #heroSlider {
+            height:400px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="col-14 mx-auto">
+            <div class="row">
+                <div class="col-24 text-right grey">
+                     <p>@Html.Sitecore().Placeholder("subNav")</p>
+                </div>
+            </div>
+
+            <div class="row green">
+                <div class="col-3 text-left">
+                    <img class="smallLogo" src="https://ww3.iehp.org/Images/IEHP_LOGO_w194xh106.png" />
+                </div>
+
+                <div class="col-21 text-right">
+                     <p>@Html.Sitecore().Placeholder("mainNav")</p>
+                </div>
+            </div>
+
+            <div id="heroSlider" class="row lightGrey">
+                <p>@Html.Sitecore().Placeholder("slider")</p>
+            </div>
+
+            <div id="mainSection" class="row grey">
+                <div class="col-12">
+                    <p>Find a doctor CTA</p>
+                    <p>@Html.Sitecore().Placeholder("fadCTA")</p>
+                </div>
+
+                <div class="col-12">
+                    <p>Find a doctor Tab Section</p>
+                    <p>@Html.Sitecore().Placeholder("fadTabs")</p>
+                </div>
+           
+
+                <div class="row green">
+                    <div class="col-6">
+                        <p>@Html.Sitecore().Placeholder("latestNews")</p>
+                    </div>
+
+                    <div class="col-18 text-right">
+                        <p>@Html.Sitecore().Placeholder("upcomingEvents")</p>
+                    </div>
+                </div>
+
+                <div class="row lightGrey">
+                    <div class="col-12">
+                        <p>@Html.Sitecore().Placeholder("mediPlan")</p>
+                    </div>
+
+                    <div class="col-12">
+                        <p>@Html.Sitecore().Placeholder("dualChoicePlan")</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer" class="row grey">
+                <div class="col-16 row aqua">
+                   <div class="col-6">
+                        Footer Links Col 1
+                    </div>
+
+                    <div class="col-6">
+                        Footer Links Col 2
+                    </div>
+
+                    <div class="col-6">
+                        Footer Links Col 3
+                    </div>
+
+                    <div class="col-6">
+                        Footer Links Col 4
+                    </div>
+                </div>
+
+                <div class="col-8 lightGrey">
+                    Additional Links.
+                </div>
+            </div>
+
+            <div id="extraFooter" class="row green">
+                 <p>@Html.Sitecore().Placeholder("extraFooter")</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+
+    <script src="/Scripts/bootstrap.js"></script>
+</html>

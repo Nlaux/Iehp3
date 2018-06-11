@@ -1,0 +1,22 @@
+﻿@using Sitecore.Data.Fields
+@using Sitecore.Data.Items
+@using Sitecore.Mvc
+@using Sitecore.Resources.Media
+
+@{
+    Item item = Sitecore.Context.Item;
+    ImageField imgField = ((ImageField)item.Fields["CAH CTA Image"]);
+}
+
+<div class="col-24">
+    <div id="CahCTAImg">
+        <img src="@MediaManager.GetMediaUrl(imgField.MediaItem)" alt="" />
+    </div>
+</div>
+
+<h6 class="topPadding"><strong>@Html.Sitecore().Field("CAH CTA Title")</strong></h6>
+<p>@Html.Sitecore().Field("CAH CTA Text")</p>
+
+<div class="topPadding">
+    <a href="#" title="@Html.Sitecore().Field("CAH CTA Button")" class="midLink">@Html.Sitecore().Field("CAH CTA Button")</a>
+</div>

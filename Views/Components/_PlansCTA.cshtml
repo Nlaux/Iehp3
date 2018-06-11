@@ -1,0 +1,22 @@
+﻿@using Sitecore.Data.Fields
+@using Sitecore.Data.Items
+@using Sitecore.Mvc
+@using Sitecore.Resources.Media
+
+@{
+    Item item = Sitecore.Context.Item;
+    ImageField imgField = ((ImageField)item.Fields["Plans CTA Image"]);
+}
+
+<div id="plansCTAImg" class="col-6">
+    <img src="@MediaManager.GetMediaUrl(imgField.MediaItem)" alt="" />
+</div>
+
+<div class="col-14">
+    @Html.Sitecore().Field("Plans CTA Text")
+</div>
+
+<div class="col-4">
+    <a href="#" class="btnSize planButton" alt="@Html.Sitecore().Field("Plans CTA Button")">@Html.Sitecore().Field("Plans CTA Button")</a>
+</div>
+

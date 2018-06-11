@@ -1,0 +1,147 @@
+﻿@using Sitecore.Mvc
+@model iehp.FooterNav.Models.NavigationViewModel
+
+<div id="priFooterLinks" class="col-19 row iehpGrey">
+    <div class="col-sm-4 col-md-4 topPadding">
+        <ul class="footerNavMenu">
+            @foreach (var child in Model.Guid1List)
+            {
+                <li>@Html.Sitecore().Field("Link Url", child)</li>
+            }
+        </ul>
+    </div>
+
+    <div class="col-sm-7 col-md-9 col-lg-8 topPadding">
+        <ul class="footerNavMenu">
+            @foreach (var child in Model.Guid2List)
+            {
+                <li>@Html.Sitecore().Field("Link Url", child)</li>
+            }
+        </ul>
+    </div>
+
+    <div class="col-sm-6 col-md-5 col-lg-6 topPadding">
+       <ul class="footerNavMenu">
+            @foreach (var child in Model.Guid3List)
+            {
+                <li>@Html.Sitecore().Field("Link Url", child)</li>
+            }
+        </ul>
+    </div>
+
+    <div class="col-sm-7 col-md-5 col-lg-6 topPadding">
+       <ul class="footerNavMenu">
+            @foreach (var child in Model.Guid4List)
+            {
+                <li>@Html.Sitecore().Field("Link Url", child)</li>
+            }
+        </ul>
+
+       <div id="socMediaLinks" class="col-24">
+           <a class="socIcons" href="https://www.facebook.com/IEHP.org"><i class="fab fa-facebook-f"></i></a>
+           <a class="socIcons" href="http://www.linkedin.com/company/68485"><i class="fab fa-linkedin-in"></i></a>
+           <a class="socIcons" href="http://twitter.com/IEHP_healthcare"><i class="fab fa-twitter"></i></a>
+           <a class="socIcons" href="https://www.youtube.com/channel/UCrX2w-mgNlvOmyLSBgGCP5A"><i class="fab fa-youtube"></i></a>
+       </div>
+
+    </div>
+</div>
+
+<div class="col-24 d-sm-none">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">About IEHP <i class="fas fa-plus-circle"></i></a></h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <ul class="footerNavMenu">
+                        @foreach (var child in Model.Guid1List)
+                        {
+                            <li>@Html.Sitecore().Field("Link Url", child)</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">For Members <i class="fas fa-plus-circle"></i></a></h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <ul class="footerNavMenu">
+                        @foreach (var child in Model.Guid2List)
+                        {
+                            <li>@Html.Sitecore().Field("Link Url", child)</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">For Providers <i class="fas fa-plus-circle"></i></a></h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <ul class="footerNavMenu">
+                        @foreach (var child in Model.Guid3List)
+                        {
+                            <li>@Html.Sitecore().Field("Link Url", child)</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Stay Connected <i class="fas fa-plus-circle"></i></a></h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <ul class="footerNavMenu">
+                        @foreach (var child in Model.Guid4List)
+                        {
+                            <li>@Html.Sitecore().Field("Link Url", child)</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="socMediaLinks" class="col-24 allPadding">
+        <a class="socIcons" href="https://www.facebook.com/IEHP.org"><i class="fab fa-facebook-f"></i></a>
+        <a class="socIcons" href="http://www.linkedin.com/company/68485"><i class="fab fa-linkedin-in"></i></a>
+        <a class="socIcons" href="http://twitter.com/IEHP_healthcare"><i class="fab fa-twitter"></i></a>
+        <a class="socIcons" href="https://www.youtube.com/channel/UCrX2w-mgNlvOmyLSBgGCP5A"><i class="fab fa-youtube"></i></a>
+    </div>
+</div>
+
+<div class="col-sm-5 row lightBlueBackground">
+    <div class="col-3 offset-1 col-sm-3 topPadding">
+        <i class="fa fa-phone grey" aria-hidden="true"></i>
+    </div>
+
+    <div id="secondaryFooterLinks" class="col-18 topPadding">
+        <p class="phoneText">Get In Touch</p>
+        <ul class="footerNavMenu">
+            @foreach (var child in Model.Guid5List)
+            {
+                <li class="smallLinkName">@Html.Sitecore().Field("Link Name", child)</li>
+                <li class="phoneLinks">@Html.Sitecore().Field("Link Url", child)</li>
+                <br />
+            }
+        </ul>
+    </div>
+</div>

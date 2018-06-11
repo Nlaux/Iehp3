@@ -1,0 +1,15 @@
+﻿@using Sitecore.Mvc
+@model iehp.DualChoicePlan.Models.EventViewModel
+
+<h4 class="ourPlans">Our Plans</h4>
+@foreach (var child in Model.DualChoicePlan)
+{
+    <h2>@Html.Sitecore().Field("Title", child)</h2>
+    <hr class="plansDivider" />
+
+    <div class="col-20 offset-2 clearfix">
+        <p>@Html.Sitecore().Field("Description", child)</p>
+
+        @Html.Sitecore().Field("Call-To-Action", child, new { @class="planButton" })
+    </div>
+}

@@ -1,0 +1,32 @@
+﻿@using Sitecore.Data.Fields
+@using Sitecore.Data.Items
+@using Sitecore.Mvc
+@using Sitecore.Resources.Media
+@model iehp.HwTabsWrapper.Models.EventViewModel
+
+
+<div class="col-24 col-md-6 row hwTabsImg">
+    @foreach (var child in Model.Guid1)
+    {
+        Item item = Sitecore.Context.Item;
+        ImageField imgField = ((ImageField)child.Fields["Tab Image"]);
+
+        <img src="@MediaManager.GetMediaUrl(imgField.MediaItem)" />
+    }
+
+    </div>
+
+<div class="col-24 col-md-18 allPadding">
+    @foreach (var child in Model.Guid1)
+    {
+        <div class="col-24">
+            <h4 class="iehpMagenta">@Html.Sitecore().Field("Tab Text Title", child)</h4>
+            <p>@Html.Sitecore().Field("Tab Text Block 1", child)</p>
+        </div>
+
+        <div class="col-24 row iehpMagenta">
+            @Html.Sitecore().Field("Tab Text Block 2", child)
+        </div>
+
+    }
+</div>

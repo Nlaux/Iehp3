@@ -1,0 +1,54 @@
+﻿@using Sitecore.Mvc
+@model iehp.MainNav.Models.NavigationViewModel
+
+<div class="col-24 text-right">
+    <ul class="navMenu small">
+        @foreach (var child in Model.Guid1List)
+        {
+            <li>
+                @Html.Sitecore().Field("Link Url", child)
+            </li>
+        }
+    </ul>
+</div>
+
+<div class="row">
+    <div class="col-3 text-left">
+        <img class="smallLogo" src="https://ww3.iehp.org/Images/IEHP_LOGO_w194xh106.png" />
+    </div>
+
+    <div class="col-21 row text-right">
+        <div class="col-21">
+            <ul class="navMenu">
+                @foreach (var child in Model.Guid2List)
+                {
+                    <li>
+                        @Html.Sitecore().Field("Link Url", child)
+                    </li>
+                }
+
+                <div id="searchLinkWrapper" class="searchlink">
+                    <i class="fa fa-search fa-custom"></i>
+                    <div id="searchBox" class="searchform">
+                        <form id="search" action="">
+                            <input type="text" class="s" id="s" name="s" placeholder="Enter search term">
+                            <button type="submit" class="sbtn"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+        <div class="col-3">
+            <div class="subNavDropList navMenu float-right">
+                <a href="#" id="subNavDropLink" class="dropbtn">Portal Login &or;</a>
+                <div id="subNavDropDown" class="dropdown-content text-left">
+                    @foreach (var child in Model.Guid3List)
+                    {
+                        @Html.Sitecore().Field("Link Url", child)
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

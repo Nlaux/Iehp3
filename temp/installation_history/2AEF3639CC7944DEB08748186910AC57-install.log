@@ -1,0 +1,17 @@
+OK: MkDir  D:\installation_history\2AEF3639CC7944DEB08748186910AC57\app_config\include\zz_scheduledpublish
+OK: MoveIfNotExists C:\inetpub\wwwroot\iehp\Website\App_Config\Include\ZZ_ScheduledPublish\ZZ_ScheduledPublishControl.config D:\installation_history\2AEF3639CC7944DEB08748186910AC57\app_config/include/zz_scheduledpublish/zz_scheduledpublishcontrol.config
+OK: MkDir  C:\inetpub\wwwroot\iehp\Website\App_Config\Include\ZZ_ScheduledPublish
+OK: Move D:\install\2AEF3639CC7944DEB08748186910AC57\aj1opvok.2em C:\inetpub\wwwroot\iehp\Website\App_Config\Include\ZZ_ScheduledPublish\ZZ_ScheduledPublishControl.config
+OK: MkDir  D:\installation_history\2AEF3639CC7944DEB08748186910AC57\bin
+OK: MoveIfNotExists C:\inetpub\wwwroot\iehp\Website\bin\ScheduledPublish.dll D:\installation_history\2AEF3639CC7944DEB08748186910AC57\bin/scheduledpublish.dll
+OK: MkDir  C:\inetpub\wwwroot\iehp\Website\bin
+OK: Move D:\install\2AEF3639CC7944DEB08748186910AC57\k2qkngby.g5s C:\inetpub\wwwroot\iehp\Website\bin\ScheduledPublish.dll
+OK: MkDir  D:\installation_history\2AEF3639CC7944DEB08748186910AC57\sitecore\shell\applications\content manager\dialogs\edit scheduled publish
+OK: MoveIfNotExists C:\inetpub\wwwroot\iehp\Website\sitecore\shell\Applications\Content Manager\Dialogs\Edit Scheduled Publish\Edit Scheduled Publish.xml D:\installation_history\2AEF3639CC7944DEB08748186910AC57\sitecore/shell/applications/content manager/dialogs/edit scheduled publish/edit scheduled publish.xml
+OK: MkDir  C:\inetpub\wwwroot\iehp\Website\sitecore\shell\Applications\Content Manager\Dialogs\Edit Scheduled Publish
+OK: Move D:\install\2AEF3639CC7944DEB08748186910AC57\t10ydqd1.klo C:\inetpub\wwwroot\iehp\Website\sitecore\shell\Applications\Content Manager\Dialogs\Edit Scheduled Publish\Edit Scheduled Publish.xml
+OK: MkDir  D:\installation_history\2AEF3639CC7944DEB08748186910AC57\sitecore\shell\applications\content manager\dialogs\schedule publish
+OK: MoveIfNotExists C:\inetpub\wwwroot\iehp\Website\sitecore\shell\Applications\Content Manager\Dialogs\Schedule Publish\Schedule Publish.xml D:\installation_history\2AEF3639CC7944DEB08748186910AC57\sitecore/shell/applications/content manager/dialogs/schedule publish/schedule publish.xml
+OK: MkDir  C:\inetpub\wwwroot\iehp\Website\sitecore\shell\Applications\Content Manager\Dialogs\Schedule Publish
+OK: Move D:\install\2AEF3639CC7944DEB08748186910AC57\zggd5fk1.bxy C:\inetpub\wwwroot\iehp\Website\sitecore\shell\Applications\Content Manager\Dialogs\Schedule Publish\Schedule Publish.xml
+OK: Delete  D:\install\2AEF3639CC7944DEB08748186910AC57-commit.bat

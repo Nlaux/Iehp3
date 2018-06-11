@@ -1,0 +1,169 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@Html.Sitecore().Field("title", new { DisableWebEdit = true })</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900" rel="stylesheet">
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/iehp.js"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+    @Html.Sitecore().VisitorIdentification()
+</head>
+<body>
+    <div class="col-24 col-xl-20 col-xxl-14 mx-auto">
+        @Html.Sitecore().Placeholder("navCtrl")
+    </div>
+
+
+    <div id="imageSlider" class="row">
+        @RenderPage("~/Views/Shared/_StickySocial.cshtml")
+
+        @Html.Sitecore().Placeholder("memberHero")
+    </div>
+
+    <div class="col-24 col-xl-20 col-xxl-14 mx-auto row justify-content-between">
+        <div class="col-24 col-md-8">
+            @Html.Sitecore().Placeholder("memberLogin")
+        </div>
+
+        <div class="col-24 col-md-7 planPadding magentaBackground white">
+            @Html.Sitecore().Placeholder("planOne")
+        </div>
+
+        <div class="col-24 col-md-8 planPadding magentaBackground white planTopSep">
+            @Html.Sitecore().Placeholder("planTwo")
+        </div>
+    </div>
+
+    <div class="col-24 col-xl-20 col-xxl-14 mx-auto row itemSep justify-content-between">
+        <div class="col-24 col-sm-12 plansWidget vertDivider">
+            @Html.Sitecore().Placeholder("plansWidget")
+        </div>
+
+        <div class="col-24 col-sm-12 ctaWidgets iehpGreen planTopSep">
+            @Html.Sitecore().Placeholder("cahCTA")
+        </div>
+    </div>
+
+    <div class="col-24 col-xl-20 col-xxl-14 mx-auto row itemSep justify-content-between">
+        <div class="col-24 col-lg-6 magentaBackground">
+            <div class="col-24">
+                @Html.Sitecore().Placeholder("hwVideo")
+            </div>
+            <div class="col-24">
+                @Html.Sitecore().Placeholder("hwWidget")
+            </div>
+        </div>
+
+        <div class="col-24 col-lg-18 itemSep2">
+            <div id="membersTabsNav" class="col-24 col-lg-23 mx-auto">
+                <div class="hwTabsHeader">
+                    <h3>Health & Wellness</h3>
+                </div>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a id="hwTab1" class="mainTab nav-link active" href="#" data-toggle="tab">Health Topics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="hwTab2" class="mainTab nav-link" href="#" data-toggle="tab">Health Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="hwTab3" class="mainTab nav-link" href="#" data-toggle="tab">Flu Facts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="hwTab4" class="mainTab nav-link" href="#" data-toggle="tab">Kids &amp; Safety</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="hwTab5" class="mainTab nav-link" href="#" data-toggle="tab">Interactive Tools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="hwTab6" class="mainTab nav-link" href="#" data-toggle="tab">Preventive Health</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content clearfix">
+                    <div class="tab-pane active" id="hwTab1Tab">
+                        <div id="hwTab1Content" class="tabWrapper row">
+                            <!--Tab Content Goes Here-->
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="hwTab2Tab">
+                        <div id="hwTab2Content" class="tabWrapper row">
+                            <!--Tab Content Goes Here-->
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="hwTab3Tab">
+                        <div id="hwTab3Content" class="tabWrapper row">
+                            <!--Tab Content Goes Here-->
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="hwTab4Tab">
+                        <div id="hwTab4Content" class="tabWrapper row">
+                            <!--Tab Content Goes Here-->
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="hwTab5Tab">
+                        <div id="hwTab5Content" class="tabWrapper row">
+                            <!--Tab Content Goes Here-->
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="hwTab6Tab">
+                        <div id="hwTab6Content" class="tabWrapper row">
+                            <!--Tab Content Goes Here-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-24 col-xl-20 col-xxl-14 mx-auto row topPadding justify-content-between">
+        <div class="col-24 col-lg-18 greyBackground">
+            <div class="row mrHeader">
+                <h4>Member Resources</h4>
+            </div>
+
+            <div class="row">
+                @Html.Sitecore().Placeholder("mrWidget")
+            </div>
+        </div>
+
+        <div class="col-24 col-lg-5 ctaWidgets greenBackground noPadding white">
+            <div class="col-24">
+                @Html.Sitecore().Placeholder("hwCTA")
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" class="row">
+        <div id="footerLinks" class="col-24 col-lg-20 col-xxl-14 mx-auto row">
+            @Html.Sitecore().Placeholder("footerLinks")
+        </div>
+    </div>
+
+    <div id="extraFooter">
+        <div class="col-24 col-lg-20 col-xxl-14 mx-auto row topPadding text-center">
+            @Html.Sitecore().Placeholder("extraFooterLinks")
+        </div>
+    </div>
+
+
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

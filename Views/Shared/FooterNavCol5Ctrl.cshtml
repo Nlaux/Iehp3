@@ -1,0 +1,15 @@
+﻿@using Sitecore.Mvc
+@model iehp.FooterNavCol5.Models.NavigationViewModel
+
+<p class="extraFooterHeader">
+    Get in Touch
+</p>
+<ul class="footerNavMenu">
+    @foreach (var child in Model.Children)
+    {
+        <li class="extraBottom">
+            <p class="addLinkText">@Html.Sitecore().Field("Additional Text", child)</p>
+            @Html.Sitecore().Field("Link Url", child)
+        </li>
+    }
+</ul>
